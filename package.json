@@ -1,0 +1,41 @@
+{
+  "name": "2pct-starter",
+  "private": true,
+  "version": "0.0.1",
+  "description": "2pct (PostCSS, Purgecss, cssnano, tailwindcss) - When all you want is a static page with modern tooling.",
+  "scripts": {
+    "build": "NODE_ENV=production npx postcss css -o public/style.css",
+    "bs": "npx browser-sync start --server --cwd public --serveStatic public --files \"**/*\" --listen 127.0.0.1 --port 8088 --no-open --no-ui",
+    "watch-css": "npx postcss css -o public/style.css --watch",
+    "dev": "concurrently \"npm:watch-css\" \"npm:bs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsclarke/2pct-starter.git"
+  },
+  "keywords": [
+    "postcss",
+    "purgecss",
+    "tailwindcss",
+    "css",
+    "html",
+    "static",
+    "starter"
+  ],
+  "author": "Richard Clarke <rsclrk@pm.me> (https://rsclarke.dev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsclarke/2pct-starter/issues"
+  },
+  "homepage": "https://github.com/rsclarke/2pct-starter#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^4.1.0",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.1.0",
+    "tailwindcss": "^1.0.4"
+  }
+}
