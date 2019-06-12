@@ -8,6 +8,6 @@ module.exports = ({ env }) => ({
     cssimport,
     tailwind,
     env === 'production' ? purgecss : false,
-    env === 'production' ? cssnano({ preset: 'default' }) : false
+    env === 'production' ? cssnano : false
   ]
 })
