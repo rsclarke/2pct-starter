@@ -7,5 +7,5 @@
 ```bash
 git clone --depth=1 https://github.com/rsclarke/2pct-starter.git && rm -rf 2pct-starter/.git
 cd 2pct-starter
-npm init
+npm install
 ```
